@@ -1,6 +1,6 @@
 pragma solidity ^0.4.18;
 
-import "zeppelin-solidity/contracts/token/StandardToken.sol";
+import "zeppelin-solidity/contracts/token/ERC20/StandardToken.sol";
 
 contract MyToken is StandardToken {
   string public name = "MyToken";
@@ -8,7 +8,7 @@ contract MyToken is StandardToken {
   uint public decimals = 18;
 
   function MyToken(uint initialSupply) public {
-    totalSupply = initialSupply;
+    totalSupply_ = initialSupply;
     balances[msg.sender] = initialSupply;
   }
 }
